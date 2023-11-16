@@ -42,7 +42,8 @@ def _main_stat_parser(meta_stats, xpbar_stats, main_stats):
 
     ret["partner"] = "verified" in meta_stats
     ret["verified"] = "check_circle" in meta_stats
-    ret["clan"] = meta_stats[meta_stats.index("[")+1:meta_stats.index("]")]
+    ret["clan"] = meta_stats[meta_stats.index("[") + 1:meta_stats.index("]")]\
+        if "[" in meta_stats and "]" in meta_stats else None
 
     return ret
 
