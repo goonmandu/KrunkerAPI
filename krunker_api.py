@@ -69,8 +69,8 @@ def _class_stats_parser(class_stats):
     return ret
 
 
-def krunker_api(username):
-    data = scrape(username)
+def krunker_api(username, show_window=False, load_images=False, debug=False):
+    data = scrape(username, show_window=show_window, load_images=load_images, debug=debug)
     combined = {
         "name": username,
         "general": _main_stat_parser(data["meta"], data["xpbar"], data["main_stats"]),

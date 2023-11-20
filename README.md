@@ -14,6 +14,16 @@ data = krunker_api(username)  # returns JSON/dict
   - **string**: **json** *[contains details of class]*
     - **string**: **int** *[details of topic of class]*
 
+## Debug options
+When calling `krunker_api`, you can append the following named arguments:
+- `show_window=True` (default `False`):
+  - Disables headless mode
+- `load_images=True` (default `False`):
+  - Enables loading of images
+- `debug=True` (default `False`):
+  - Enables `show_window` and `load_images`
+  - Lets you interact with the browser window and waits for you to press [Enter] in the console, then continues program flow
+
 ## Contributors
 - GoonMandu - [Krunker](https://krunker.io/social.html?p=profile&q=GoonMandu) - [GitHub](https://github.com/goonmandu)
 - a6a6 - [Krunker](https://krunker.io/social.html?p=profile&q=a6a6) - [GitHub](https://github.com/a7a7-7)
